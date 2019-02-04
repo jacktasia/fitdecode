@@ -325,6 +325,7 @@ class FitReader:
         extra_header_size = header_size - len(chunk)
         read_crc = None
         crc_matched = None
+        computed_crc = None
         if extra_header_size:
             # at least 2 bytes expected for the CRC
             if extra_header_size < 2:
